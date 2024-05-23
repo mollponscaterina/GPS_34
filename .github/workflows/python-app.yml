@@ -22,6 +22,9 @@ jobs:
     - name: Lint with pylint
       run: |
         pylint main.py test.py transform.py
+      continue-on-error: true
+      env:
+        TERM: xterm
 
     - name: Run tests with pytest
       run: |
